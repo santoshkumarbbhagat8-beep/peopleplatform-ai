@@ -1,0 +1,13 @@
+server:
+  port: ${SERVER_PORT:8083}
+spring:
+  application:
+    name: peopleai-candidates-service
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/peopleai?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${MYSQL_USER:peopleai}
+    password: ${MYSQL_PASSWORD:local_dev_change_me}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
