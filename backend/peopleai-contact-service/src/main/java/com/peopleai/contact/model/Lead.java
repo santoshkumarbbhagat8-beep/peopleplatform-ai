@@ -1,0 +1,3 @@
+package com.peopleai.contact.model;
+import jakarta.persistence.*;import java.time.Instant;
+@Entity @Table(name="contact_leads") public class Lead{@Id @GeneratedValue(strategy=GenerationType.IDENTITY)private Long id;private String name;private String email;private String company;@Column(length=3000)private String message;private String status="Queued";private Instant createdAt=Instant.now();protected Lead(){}public Lead(String n,String e,String c,String m){name=n;email=e;company=c;message=m;}public Long getId(){return id;}public String getName(){return name;}public String getEmail(){return email;}public String getCompany(){return company;}public String getMessage(){return message;}public String getStatus(){return status;}public Instant getCreatedAt(){return createdAt;}}

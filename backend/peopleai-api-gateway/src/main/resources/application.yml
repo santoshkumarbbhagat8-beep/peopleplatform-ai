@@ -1,0 +1,10 @@
+server:
+  port: ${SERVER_PORT:8080}
+spring:
+  application:
+    name: peopleai-api-gateway
+services:
+  auth: ${AUTH_SERVICE_URL:http://localhost:8081}
+  jobs: ${JOBS_SERVICE_URL:http://localhost:8082}
+  candidates: ${CANDIDATES_SERVICE_URL:http://localhost:8083}
+  contact: ${CONTACT_SERVICE_URL:http://localhost:8084}
